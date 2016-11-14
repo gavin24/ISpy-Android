@@ -31,12 +31,6 @@ public class FameRepositoryImpl extends SQLiteOpenHelper implements FameReposito
     public static final String COLUMN_LIKES = "likes";
     public static final String COLUMN_SHARES = "shares";
 
-    private int dislikes;
-    private long id;
-    private int likes;
-    private int shares;
-    private long storyId;
-    private long userId;
 
     // Database creation sql statement
     private static final String DATABASE_CREATE = " CREATE TABLE "

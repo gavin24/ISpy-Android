@@ -18,6 +18,32 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+        <service
+            android:name=".Services.Impl.UserServiceImpl"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".Services.Impl.ImageServiceImpl"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".Services.Impl.StoryServiceImpl"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".Services.Impl.TagServiceImpl"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".Services.Impl.FameServiceImpl"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".Services.Impl.UserTagsServiceImpl"
+            android:enabled="true"
+            android:exported="true" />
     </application>
 
 </manifest>

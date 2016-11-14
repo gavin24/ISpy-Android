@@ -49,9 +49,9 @@ public class FameServiceImpl extends Service implements FameService {
 
 
     @Override
-    public Fame addFame(Fame animal) {
+    public Fame addFame(Fame fame) {
         try{
-            return repository.save(animal);
+            return repository.save(fame);
         }
         catch(Exception x)
 
@@ -61,8 +61,8 @@ public class FameServiceImpl extends Service implements FameService {
         return null;
     }
     @Override
-    public Fame deleteFame(Fame animal) {
-        return repository.delete(animal);
+    public Fame deleteFame(Fame fame) {
+        return repository.delete(fame);
     }
 
     @Override
@@ -84,8 +84,8 @@ public class FameServiceImpl extends Service implements FameService {
         repository.deleteAll();
     }
     @Override
-    public Fame updateFame(Fame animal) {
-        return repository.update(animal);
+    public Fame updateFame(Fame fame) {
+        return repository.update(fame);
     }
 
     @Override

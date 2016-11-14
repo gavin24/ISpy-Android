@@ -49,9 +49,9 @@ public class StoryServiceImpl extends Service implements StoryService {
 
 
     @Override
-    public Story addStory(Story animal) {
+    public Story addStory(Story story) {
         try{
-            return repository.save(animal);
+            return repository.save(story);
         }
         catch(Exception x)
 
@@ -61,8 +61,8 @@ public class StoryServiceImpl extends Service implements StoryService {
         return null;
     }
     @Override
-    public Story deleteStory(Story animal) {
-        return repository.delete(animal);
+    public Story deleteStory(Story story) {
+        return repository.delete(story);
     }
 
     @Override
@@ -84,8 +84,8 @@ public class StoryServiceImpl extends Service implements StoryService {
         repository.deleteAll();
     }
     @Override
-    public Story updateStory(Story animal) {
-        return repository.update(animal);
+    public Story updateStory(Story story) {
+        return repository.update(story);
     }
 
     @Override

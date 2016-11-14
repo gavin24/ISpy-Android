@@ -49,9 +49,9 @@ public class TagServiceImpl extends Service implements TagService {
 
 
     @Override
-    public Tag addTag(Tag animal) {
+    public Tag addTag(Tag tag) {
         try{
-            return repository.save(animal);
+            return repository.save(tag);
         }
         catch(Exception x)
 
@@ -61,8 +61,8 @@ public class TagServiceImpl extends Service implements TagService {
         return null;
     }
     @Override
-    public Tag deleteTag(Tag animal) {
-        return repository.delete(animal);
+    public Tag deleteTag(Tag tag) {
+        return repository.delete(tag);
     }
 
     @Override
@@ -84,8 +84,8 @@ public class TagServiceImpl extends Service implements TagService {
         repository.deleteAll();
     }
     @Override
-    public Tag updateTag(Tag animal) {
-        return repository.update(animal);
+    public Tag updateTag(Tag tag) {
+        return repository.update(tag);
     }
 
     @Override

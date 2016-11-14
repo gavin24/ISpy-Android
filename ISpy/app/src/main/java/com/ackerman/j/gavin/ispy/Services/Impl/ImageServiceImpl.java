@@ -49,9 +49,9 @@ public class ImageServiceImpl extends Service implements ImageService {
 
 
     @Override
-    public Image addImage(Image animal) {
+    public Image addImage(Image image) {
         try{
-            return repository.save(animal);
+            return repository.save(image);
         }
         catch(Exception x)
 
@@ -61,8 +61,8 @@ public class ImageServiceImpl extends Service implements ImageService {
         return null;
     }
     @Override
-    public Image deleteImage(Image animal) {
-        return repository.delete(animal);
+    public Image deleteImage(Image image) {
+        return repository.delete(image);
     }
 
     @Override
@@ -84,8 +84,8 @@ public class ImageServiceImpl extends Service implements ImageService {
         repository.deleteAll();
     }
     @Override
-    public Image updateImage(Image animal) {
-        return repository.update(animal);
+    public Image updateImage(Image image) {
+        return repository.update(image);
     }
 
     @Override

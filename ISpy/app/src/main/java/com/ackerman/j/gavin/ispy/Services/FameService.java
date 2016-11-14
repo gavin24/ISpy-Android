@@ -8,10 +8,10 @@ import java.util.ArrayList;
  * Created by gavin.ackerman on 2016-06-22.
  */
 public interface FameService {
-    Fame addFame(Fame animal);
-    Fame updateFame( Fame animal);
-    Fame deleteFame( Fame animal);
-    Fame getFame(Long d);
+    Fame addFame(Fame fame);
+    Fame updateFame( Fame fame);
+    Fame deleteFame( Fame fame);
+    Fame getFame(Long id);
     ArrayList<Fame> getAllFames( );
 
     void removeAllFames();

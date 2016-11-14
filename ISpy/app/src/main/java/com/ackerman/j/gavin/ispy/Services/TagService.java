@@ -8,10 +8,10 @@ import java.util.ArrayList;
  * Created by gavin.ackerman on 2016-06-22.
  */
 public interface TagService {
-    Tag addTag(Tag animal);
-    Tag updateTag( Tag animal);
-    Tag deleteTag( Tag animal);
-    Tag getTag(Long d);
+    Tag addTag(Tag tag);
+    Tag updateTag( Tag tag);
+    Tag deleteTag( Tag tag);
+    Tag getTag(Long id);
     ArrayList<Tag> getAllTags( );
 
     void removeAllTags();

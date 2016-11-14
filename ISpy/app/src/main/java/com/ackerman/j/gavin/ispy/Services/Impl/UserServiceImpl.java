@@ -12,6 +12,8 @@ import com.ackerman.j.gavin.ispy.Repositories.UserRepository;
 import com.ackerman.j.gavin.ispy.Services.UserService;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
 /**
  * Created by gavin.ackerman on 2016-06-21.
@@ -48,9 +50,9 @@ public class UserServiceImpl extends Service implements UserService {
 
 
     @Override
-    public User addUser(User animal) {
+    public User addUser(User user) {
         try{
-            return repository.save(animal);
+            return repository.save(user);
         }
         catch(Exception x)
 
@@ -60,8 +62,8 @@ public class UserServiceImpl extends Service implements UserService {
         return null;
     }
     @Override
-    public User deleteUser(User animal) {
-        return repository.delete(animal);
+    public User deleteUser(User user) {
+        return repository.delete(user);
     }
 
     @Override
@@ -77,14 +79,28 @@ public class UserServiceImpl extends Service implements UserService {
         }
         return null;
     }
+    public boolean isAuthentic(String username,String password)
+    {
+        Set<User> users;
+        users = repository.findAll();
 
+        for (User user :users)
+
+        {
+            if (user.getEmail().equalsIgnoreCase(username) && user.getpassword().equals(password)) {
+                return true;
+            }
+
+        }
+        return false;
+    }
     @Override
     public void removeAllUsers() {
         repository.deleteAll();
     }
     @Override
-    public User updateUser(User animal) {
-        return repository.update(animal);
+    public User updateUser(User user) {
+        return repository.update(user);
     }
 
     @Override

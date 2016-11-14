@@ -51,9 +51,9 @@ public class UserTagsServiceImpl extends Service implements UserTagsService {
 
 
     @Override
-    public UserTags addUserTags(UserTags animal) {
+    public UserTags addUserTags(UserTags userTags) {
         try{
-            return repository.save(animal);
+            return repository.save(userTags);
         }
         catch(Exception x)
 
@@ -63,8 +63,8 @@ public class UserTagsServiceImpl extends Service implements UserTagsService {
         return null;
     }
     @Override
-    public UserTags deleteUserTags(UserTags animal) {
-        return repository.delete(animal);
+    public UserTags deleteUserTags(UserTags userTags) {
+        return repository.delete(userTags);
     }
 
     @Override
@@ -86,8 +86,8 @@ public class UserTagsServiceImpl extends Service implements UserTagsService {
         repository.deleteAll();
     }
     @Override
-    public UserTags updateUserTags(UserTags animal) {
-        return repository.update(animal);
+    public UserTags updateUserTags(UserTags userTags) {
+        return repository.update(userTags);
     }
 
     @Override
