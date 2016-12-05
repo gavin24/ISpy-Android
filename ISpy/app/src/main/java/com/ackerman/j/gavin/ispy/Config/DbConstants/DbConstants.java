@@ -5,5 +5,5 @@ package com.ackerman.j.gavin.ispy.Config.DbConstants;
  */
 public class DbConstants {
     public static final String DATABASE_NAME="IspyDB";
-    public static final int DATABASE_VERSION=1;
+    public static final int DATABASE_VERSION=2;
 }
