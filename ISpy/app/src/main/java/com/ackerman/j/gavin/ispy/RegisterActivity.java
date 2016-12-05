@@ -58,8 +58,8 @@ public class RegisterActivity extends AppCompatActivity {
                     .email(email)
                     .password(password)
                     .build();
-            userService.updateUser(user);
-            Intent i = new Intent(this,NewsFeedActivity.class);
+            userService.addUser(user);
+            Intent i = new Intent(this,MenuActivity.class);
 
             startActivity(i);
         }

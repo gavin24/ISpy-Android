@@ -7,4 +7,36 @@
         android:orderInCategory="100"
         android:title="@string/action_settings"
         app:showAsAction="never" />
+
+
+
+
+    <item
+        android:id="@+id/mapMenu"
+        android:icon="@drawable/menu_map"
+        android:title="Map" />
+    <item
+        android:id="@+id/favMenu"
+        android:icon="@drawable/menu_favourite"
+        android:title="Favorite" />
+    <item
+        android:id="@+id/listMenu"
+        android:icon="@drawable/menu_list"
+        android:title="List" />
+    <item
+        android:id="@+id/settingsMenu"
+        android:icon="@drawable/menu_settings"
+        android:title="Settings" />
+
+    <Button
+        android:id="@+id/btn_click"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#176CEC"
+        android:text="SHOW POPUP"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#fff"
+        android:textStyle="bold" />
+
 </menu>
