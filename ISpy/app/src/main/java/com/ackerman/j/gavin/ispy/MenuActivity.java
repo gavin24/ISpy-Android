@@ -5,14 +5,19 @@ package com.ackerman.j.gavin.ispy;
  */
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.ViewGroup.LayoutParams;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import static com.ackerman.j.gavin.ispy.R.layout.create_story;
 
 
 public class MenuActivity extends AppCompatActivity {
@@ -26,6 +31,9 @@ public class MenuActivity extends AppCompatActivity {
         addContentView(text, new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT));
     }
 
+
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -38,7 +46,8 @@ public class MenuActivity extends AppCompatActivity {
         Toast.makeText(getApplicationContext(),	item.getTitle() + " selected", Toast.LENGTH_SHORT).show();
 
         switch (item.getItemId()) {
-            case R.id.mapMenu:
+            case R.id.createStory:
+                setContentView(R.layout.create_story);
                 // do something
                 break;
             case R.id.favMenu:
@@ -53,5 +62,7 @@ public class MenuActivity extends AppCompatActivity {
         }
         return true;
     }
+
+
 
 }
